@@ -1,0 +1,29 @@
+{
+	"views": [
+		{
+			"id": 1,
+			"location": "東眼山",
+			"total": 5
+		},
+		{
+			"id": 2,
+			"location": "阿里山",
+			"total": 18
+		},
+		{
+			"id": 3,
+			"location": "望古瀑布",
+			"total": 1
+		},
+		{
+			"id": 4,
+			"location": "處女瀑布",
+			"total": 1
+		},
+		{
+			"id": 5,
+			"location": "鵝公髻山",
+			"total": 5
+		}
+	]
+}

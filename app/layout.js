@@ -1,3 +1,5 @@
+import "../styles/main.scss"
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "護國神殿",
@@ -8,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="zh-Hant">
       <body suppressHydrationWarning={true}>
+        <Navbar />
         {children}
       </body>
     </html>
