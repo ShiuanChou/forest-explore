@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+
+body {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Noto Serif TC", serif;
+  background-color: #000;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-button {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
