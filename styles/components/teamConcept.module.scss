@@ -1,9 +1,9 @@
 .container {
-    height: 70vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 5%;
+    padding: 5%;
 
     .item {
         &.description {
@@ -14,30 +14,14 @@
 
             h1 {
                 font-size: 50px;
-                margin: 2rem 0;
+                margin: 1rem 0;
                 position: relative;
-
-                // &::before {
-                //     content: 'Team Concept';
-                //     position: absolute;
-                //     top: 5px;
-                //     left: -10px;
-                //     right: 0;
-                //     width: 100%;
-                //     color: #ffffffa5;
-                //     font-size: 50px;
-                // }
             }
         }
 
         &.vedio {
             width: 60%;
             padding: 0 1rem;
-
-            iframe {
-                width: 100%;
-                height: 500px;
-            }
         }
     }
 }
