@@ -1,4 +1,128 @@
+@use '../base/variables';
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
 .container {
 	width: 100vw;
+	height: auto;
+	padding: 10%;
+	position: relative;
+
+	.locationTitle {
+		font-family: "Ma Shan Zheng", cursive;
+		font-size: 300px;
+		color: rgba(255, 255, 255, 0.1);
+		position: absolute;
+		right: 0;
+		bottom: -5%;
+		z-index: -1;
+		user-select: none;
+		overflow: hidden;
+	}
+
+	.tabGroup {
+		margin-bottom: 2rem;
+
+		.tab {
+			z-index: 2;
+			color: #c6c6c6;
+			margin: 0 1rem;
+			padding: 10px;
+			height: auto;
+			cursor: pointer;
+			position: relative;
+			transition: all 0.5s ease;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 1px;
+				border-radius: 50px;
+				transition: all 0.5s ease;
+			}
+
+			&:hover {
+				&::before {
+					width: 100%;
+					background: #c6c6c6;
+				}
+			}
+
+			&.active {
+				color: variables.$fontColor;
+
+				&::before {
+					width: 100%;
+					background: variables.$fontColor;
+				}
+			}
+		}
+	}
+
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		overflow: hidden;
+
+		.item {
+			position: relative;
+			width: calc(100%/3 - 1rem);
+			overflow: hidden;
+			margin: 0.5rem;
+			cursor: pointer;
+			transition: all 0.5s ease;
+			background: rgba(255, 255, 255, 0.5);
+
+			.play {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: none;
+				transition: all 0.5s ease;
+			}
+
+			&:hover {
+				filter: grayscale(100%);
+
+				.play {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+
+		img {
+			transform: scale(2, 2);
+			width: 100%;
+			height: auto;
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+}
+
+.video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
 	height: 100vh;
+	background: rgba(0, 0, 0, 0.708);
+	z-index: 50;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		padding: 2rem;
+		cursor: pointer;
+	}
 }
