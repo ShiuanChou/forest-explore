@@ -1,11 +1,12 @@
+@use './variables';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 
 body {
   font-size: 18px;
   line-height: 1.5;
-  font-family: "Noto Serif TC", serif;
-  background-color: #000;
-  color: #fff;
+  font-family: "Noto Serif TC", serif !important;
+  background-color: variables.$bgColor;
+  color: variables.$fontColor;
 }
 
 ::-webkit-scrollbar {
@@ -29,4 +30,8 @@ body {
 
 ::-webkit-scrollbar-track {
   box-shadow: transparent;
+}
+
+nextjs-portal {
+  display: none;
 }
