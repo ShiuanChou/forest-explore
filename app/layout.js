@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="zh-Hant">
-      <body suppressHydrationWarning={true}>
+      <body>
         <Navbar />
         {children}
       </body>
