@@ -1,20 +1,37 @@
+@use '../base/variables';
+
 .container {
     width: 100vw;
-    height: 90vh;
-    padding: 5%;
+    height: 100vh;
+    padding: 2% 5%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    position: relative;
 
-    h1 {
-        font-size: 50px;
-        margin: 2rem 0;
-        position: relative;
+    &::before {
+        content: '';
+        background: linear-gradient(variables.$bgColor, rgba(0, 0, 0, 0.5)), bottom / cover no-repeat url(../../public/images/footer-bg.jpg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
     }
 
-    iframe {
-        width: 50%;
-        height: 500px;
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 5% 0;
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 1rem;
+            position: relative;
+        }
     }
 }
