@@ -28,7 +28,7 @@ export default function Navbar() {
     }, []);
 
     const scrollDown = () => {
-        const targetHeight = document.getElementById('teamConcept').offsetTop;
+        const targetHeight = document.getElementById('scrollDownArea').offsetTop;
         window.scroll({
             top: targetHeight,
             left: 0,
@@ -38,7 +38,22 @@ export default function Navbar() {
 
     return (
         <nav className={styles.container}>
-            <Image src={Logo} alt='logo' className={isScroll ? styles.small : styles.large} priority />
+            <div className={styles.menu}>
+                {isScroll &&
+                    <div>
+                        <span className={styles.link}>森林探索</span>
+                        <span className={styles.link}>美景探索</span>
+                    </div>
+                }
+                <Image src={Logo} alt='logo' className={isScroll ? styles.small : styles.large} priority />
+
+                {isScroll &&
+                    <div>
+                        <span className={styles.link}>團隊理念</span>
+                        <span className={styles.link}>團隊紀錄片</span>
+                    </div>
+                }
+            </div>
             {isBtnShow && <span onClick={() => scrollDown()} className={styles.start}>開始探索</span>}
         </nav>
     )

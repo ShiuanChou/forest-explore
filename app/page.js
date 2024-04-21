@@ -19,9 +19,9 @@ export default function Home() {
   return (
     <>
       <Landing />
-      <TeamConcept />
       <Forest />
       <Views />
+      <TeamConcept />
       <Record />
     </>
   );

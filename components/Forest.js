@@ -45,7 +45,7 @@ export default function Forest() {
 
 	return (
 		<>
-			<section className={styles.container}>
+			<section className={styles.container} id="scrollDownArea">
 				<div className={styles.row}>
 					<div className={`${styles.item} ${styles.large}`}>
 						<Intro spot="阿里山" location="嘉義" />
