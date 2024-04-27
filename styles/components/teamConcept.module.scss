@@ -1,9 +1,16 @@
+@import "@/styles/base/mixin";
+
 .container {
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5% 10%;
+
+    @include Large {
+        flex-direction: column;
+        padding: 10%;
+    }
 
     .item {
         &.description {
@@ -14,8 +21,12 @@
             padding: 0 0 0 3rem;
             background: #00000033, center / cover no-repeat url(../../public/images/360Logo.png);
 
+            @include Large {
+                width: 100%;
+            }
+
             h1 {
-                font-size: 50px;
+                font-size: 40px;
                 margin: 1rem 0;
                 position: relative;
             }
@@ -40,6 +51,11 @@
         &.vedio {
             width: 65%;
             padding: 0 1rem;
+
+            @include Large {
+                width: 100%;
+            }
+
         }
     }
 }

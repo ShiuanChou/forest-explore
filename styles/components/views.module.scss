@@ -1,11 +1,16 @@
 @use '../base/variables';
 @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+@import "@/styles/base/mixin";
 
 .container {
 	width: 100vw;
 	height: auto;
 	padding: 10%;
 	position: relative;
+
+	@include Medium {
+		padding: 10% 5%;
+	}
 
 	.locationTitle {
 		font-family: "Ma Shan Zheng", cursive;
@@ -17,20 +22,37 @@
 		z-index: -1;
 		user-select: none;
 		overflow: hidden;
+
+		@include Large {
+			font-size: 150px;
+		}
+
+		@include X-Small {
+			display: none;
+		}
 	}
 
 	.tabGroup {
 		margin-bottom: 2rem;
+		display: flex;
+		flex-wrap: wrap;
 
 		.tab {
+			width: auto;
+			text-align: center;
 			z-index: 2;
 			color: #c6c6c6;
-			margin: 0 1rem;
 			padding: 10px;
 			height: auto;
 			cursor: pointer;
 			position: relative;
 			transition: all 0.5s ease;
+			margin-right: 1rem;
+			
+			@include X-Small {
+				min-width: 25%;
+				margin-right: 0;
+			}
 
 			&::before {
 				content: '';
@@ -46,7 +68,7 @@
 			&:hover {
 				&::before {
 					width: 100%;
-					background: #c6c6c6;
+					background: #4c4c4c;
 				}
 			}
 
@@ -75,6 +97,14 @@
 			cursor: pointer;
 			transition: all 0.5s ease;
 			background: rgba(255, 255, 255, 0.5);
+
+			@include Medium {
+				width: calc(100%/2 - 1rem);
+			}
+
+			@include X-Small {
+				width: calc(100% - 1rem);
+			}
 
 			.play {
 				position: absolute;

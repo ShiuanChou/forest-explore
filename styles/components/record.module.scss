@@ -1,14 +1,36 @@
 @use '../base/variables';
+@import "@/styles/base/mixin";
 
 .container {
     width: 100vw;
     height: 100vh;
     padding: 2% 5%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     position: relative;
+    margin-top: -1px;
+
+    @include Large {
+        height: auto;
+        padding: 5%;
+    }
+
+    iframe {
+        width: 767px;
+        height: 443px;
+
+        @include Medium {
+            width: 575px;
+            height: 326px;
+        }
+
+        @include X-Small {
+            width: 420px;
+            height: 326px;
+        }
+    }
 
     &::before {
         content: '';
@@ -26,11 +48,16 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 5% 0;
+        margin: 6rem 0 4rem 0;
+
+        @include Large {
+            margin-top: 3rem;
+            margin-bottom: 6rem;
+        }
 
         h1 {
             font-size: 40px;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
             position: relative;
         }
     }

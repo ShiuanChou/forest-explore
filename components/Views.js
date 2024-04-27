@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styles from '@/styles/components/views.module.scss';
 import { viewsData } from '@/data/views.js';
 import Image from 'next/image';
+import { scrollMenu } from '@/data/scrollMenu';
 
 export default function Views() {
 	const [active, setActive] = useState(1);
@@ -37,7 +38,7 @@ export default function Views() {
 
 	return (
 		<>
-			<section className={styles.container}>
+			<section className={styles.container} id={scrollMenu.views}>
 				<div className={styles.tabGroup}>
 					{viewsData && viewsData.map((view) =>
 						<span
@@ -51,7 +52,7 @@ export default function Views() {
 				<div className={styles.items}>
 					{viewsData && viewsData[active - 1].images.map((n, index) =>
 						<div key={index} className={styles.item}>
-							<Image src={n} alt={'view'} priority />
+							<Image src={n} alt='view' priority />
 							<PlayButton photoId={index} />
 						</div>
 					)}
