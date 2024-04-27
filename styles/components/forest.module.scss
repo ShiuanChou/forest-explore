@@ -102,7 +102,6 @@ $subColor: rgba(255, 255, 255, 0.3);
 
 				h6 {
 					font-size: 40px;
-					font-weight: bold;
 
 					@include X-Small {
 						font-size: 28px;
@@ -159,6 +158,11 @@ $subColor: rgba(255, 255, 255, 0.3);
 			&:first-child {
 				background-image: url(../../public/images/forest-1.jpg);
 				margin-right: 1rem;
+
+
+				@include Small {
+					margin-right: 0;
+				}
 			}
 
 			&:nth-child(2) {
@@ -172,6 +176,11 @@ $subColor: rgba(255, 255, 255, 0.3);
 			&:last-child {
 				background-image: url(../../public/images/forest-4.jpg);
 				margin-left: 1rem;
+
+
+				@include Small {
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -181,10 +190,11 @@ $subColor: rgba(255, 255, 255, 0.3);
 	position: fixed;
 	top: 0;
 	left: 0;
+	bottom: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	background: rgba(0, 0, 0, 0.708);
-	z-index: 50;
+	z-index: 10000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -195,5 +205,22 @@ $subColor: rgba(255, 255, 255, 0.3);
 		top: 10px;
 		padding: 2rem;
 		cursor: pointer;
+	}
+
+	iframe {
+		@include Large {
+			width: 767px;
+			height: 443px;
+		}
+
+		@include Medium {
+			width: 575px;
+			height: 326px;
+		}
+
+		@include X-Small {
+			width: 300px;
+			height: 300px;
+		}
 	}
 }

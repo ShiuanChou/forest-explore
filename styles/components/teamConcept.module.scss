@@ -9,7 +9,6 @@
 
     @include Large {
         flex-direction: column;
-        padding: 10%;
     }
 
     .item {
@@ -23,6 +22,7 @@
 
             @include Large {
                 width: 100%;
+                padding: 0;
             }
 
             h1 {

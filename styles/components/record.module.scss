@@ -6,7 +6,7 @@
     height: 100vh;
     padding: 2% 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     position: relative;
@@ -27,8 +27,8 @@
         }
 
         @include X-Small {
-            width: 420px;
-            height: 326px;
+            width: 300px;
+            height: 300px;
         }
     }
 
