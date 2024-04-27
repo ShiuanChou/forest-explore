@@ -1,10 +1,16 @@
-$subColor: rgba(255, 255, 255, 0.5);
+@import "@/styles/base/mixin";
+
+$subColor: rgba(255, 255, 255, 0.3);
 
 .container {
 	width: 100vw;
 	height: auto;
 	padding: 12% 0 5% 0;
 	position: relative;
+
+	@include Medium {
+		padding-top: 5%;
+	}
 
 	&::after {
 		content: 'Forest';
@@ -14,6 +20,14 @@ $subColor: rgba(255, 255, 255, 0.5);
 		top: 0;
 		left: 0;
 		z-index: 1;
+
+		@include Large {
+			font-size: 120px;
+		}
+
+		@include Medium {
+			display: none;
+		}
 	}
 
 	&::before {
@@ -24,6 +38,14 @@ $subColor: rgba(255, 255, 255, 0.5);
 		right: 0;
 		bottom: 0;
 		z-index: 1;
+
+		@include Large {
+			font-size: 100px;
+		}
+
+		@include Medium {
+			display: none;
+		}
 	}
 
 	.row {
@@ -50,6 +72,19 @@ $subColor: rgba(255, 255, 255, 0.5);
 			align-items: center;
 			transition: all 1s ease-in-out;
 
+			@include Large {
+				height: 50vh;
+			}
+
+			@include Small {
+				height: 30vh;
+			}
+
+			@include X-Small {
+				height: 20vh;
+				border-radius: 20px;
+			}
+
 			.intro {
 				transition: all 1s ease-in-out;
 				background: linear-gradient(transparent, transparent, #00000093);
@@ -61,9 +96,17 @@ $subColor: rgba(255, 255, 255, 0.5);
 				flex-direction: column;
 				user-select: none;
 
+				@include X-Small {
+					padding: 1rem;
+				}
+
 				h6 {
-					font-size: 50px;
+					font-size: 40px;
 					font-weight: bold;
+
+					@include X-Small {
+						font-size: 28px;
+					}
 				}
 
 				span {
@@ -91,10 +134,26 @@ $subColor: rgba(255, 255, 255, 0.5);
 
 			&.large {
 				width: calc(60% - 1rem);
+
+				@include Medium {
+					width: calc(50% - 1rem);
+				}
+
+				@include Small {
+					width: 100%;
+				}
 			}
 
 			&.small {
 				width: 40%;
+
+				@include Medium {
+					width: 50%;
+				}
+
+				@include Small {
+					width: 100%;
+				}
 			}
 
 			&:first-child {
@@ -119,16 +178,16 @@ $subColor: rgba(255, 255, 255, 0.5);
 }
 
 .video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.708);
-    z-index: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.708);
+	z-index: 50;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	.close {
 		position: absolute;

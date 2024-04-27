@@ -1,6 +1,7 @@
 import styles from '@/styles/components/forest.module.scss'
 import { useState } from 'react';
 import { viewsData } from '@/data/views.js';
+import { scrollMenu } from '@/data/scrollMenu';
 
 export default function Forest() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ export default function Forest() {
 
 	return (
 		<>
-			<section className={styles.container} id="scrollDownArea">
+			<section className={styles.container} id={scrollMenu.forest}>
 				<div className={styles.row}>
 					<div className={`${styles.item} ${styles.large}`}>
 						<Intro spot="阿里山" location="嘉義" />
